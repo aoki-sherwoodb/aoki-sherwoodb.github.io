@@ -112,8 +112,65 @@
     margin-bottom: 0;
   }
 
-  #publications ul {
+  #publications ul,
+  #posters ul {
     margin-left: 20px;
+  }
+
+  #publications li,
+  #posters li {
+    margin: 12px 0;
+  }
+
+  /* PDF lightbox modal */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px;
+  }
+
+  .modal-overlay[hidden] {
+    display: none;
+  }
+
+  .modal-content {
+    position: relative;
+    width: 90vw;
+    max-width: 900px;
+    height: 90vh;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    padding: 36px 8px 8px;
+  }
+
+  .modal-content iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0 0 6px 6px;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 4px;
+    right: 8px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    color: #333;
+    padding: 0 6px;
+  }
+
+  .modal-close:hover {
+    color: #111985;
   }
   
   footer {
